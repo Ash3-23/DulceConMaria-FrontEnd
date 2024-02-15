@@ -6,9 +6,11 @@ const Home = () => {
   return (
     <div className="App">
       <header className='App-header'>
+      
+      <h6 className='header__prox'>PRÓXIMAMENTE</h6>
         <h1 className='header__title'>Dulce con María</h1>
 
-        <h6 className='header__h6'>Si quieres saber más te avisamos!</h6>
+        <h6 className='header__h6'>¿Quieres saber más?</h6>
         <EmailInputButton />
       </header>
 

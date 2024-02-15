@@ -2,7 +2,7 @@
   text-align: center;
 }
 .App-header {
-  background-color:var(--color-background);
+  background-color:#F3E7D7;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -10,15 +10,40 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-image: url('../../assets/images/chocolate.png');
+  background-size: cover; /* Ajusta la imagen de fondo para que cubra todo el contenedor */
+  background-position: center; /* Centra la imagen de fondo */
+  background-size: contain;
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
 }
 
 .header__title{
-  background-color: var(--color);
-  font-size: 5rem;
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 6rem;
+  color: #F47153;
 }
 
 .header__h6{
-  margin: 50px;
   margin-bottom: 5rem;
-  color: rgb(143, 133, 142);
+  margin-top: 1rem;
+  color: #F3A632;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: italic;
+  letter-spacing: 0.15rem;
+}
+
+.header__prox{
+  font-size: 1.2rem;
+  color: #F3A632;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.3rem;
 }

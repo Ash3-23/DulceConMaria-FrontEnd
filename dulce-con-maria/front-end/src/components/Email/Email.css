@@ -1,3 +1,11 @@
+.email-input__container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 55px;
+}
+
 .input__button-mail {
   color: 'black';
   font-size: '14px';
@@ -101,3 +109,4 @@
   border-radius: 5px;
   font-size: 14px;
 }
+

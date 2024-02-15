@@ -14,4 +14,11 @@
 
 .header__title{
   background-color: var(--color);
+  font-size: 5rem;
+}
+
+.header__h6{
+  margin: 50px;
+  margin-bottom: 5rem;
+  color: rgb(143, 133, 142);
 }

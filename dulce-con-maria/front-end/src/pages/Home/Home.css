@@ -35,8 +35,7 @@
 @media (max-width: 470px) {
   .header__background {
     width: 60rem;
-    position: relative;
-    bottom: 38px;
+    height: 100vh;
   }
 }
 
@@ -49,8 +48,7 @@
 
 @media (max-width: 470px) {
   .header__container-text {
-    padding-top: 40%;
-
+    padding-top: 38%;
     position: relative;
     left: 38%;
     bottom: 30%;
@@ -90,6 +88,9 @@
 @media (max-width: 768px) {
   .header__h6 {
     font-size: 1.2rem;
+    font-weight: 600;
+    text-shadow: rgb(255, 255, 255) 0.02em 0.02em 0.03em
+
   }
 
 }

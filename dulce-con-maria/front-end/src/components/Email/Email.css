@@ -1,15 +1,9 @@
-.email-input__container{
+.email-input__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 55px;
-}
-
-.input__button-mail {
-  color: 'black';
-  font-size: '14px';
-  background-color: rgb(230, 235, 198);
 }
 
 
@@ -28,22 +22,22 @@
 }
 
 .sparkle {
-  fill: #a389ea;
+  fill: var(--color-primary);
   transition: all 800ms ease;
 }
 
 .text {
   font-weight: 600;
-  color: #AAAAAA;
+  color: #ffffff;
   font-size: medium;
 }
 
 .btn:hover {
-  background: linear-gradient(0deg, #A47CF3, #683FEA);
+  background: linear-gradient(0deg, var(--color-secondary), var(--color-primary));
   box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
     inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
     0px 0px 0px 4px rgba(255, 255, 255, 0.2),
-    0px 0px 90px 0px #9917FF;
+    0px 0px 90px 0px var(--color-borders);
   transform: translateY(-2px);
 }
 
@@ -66,23 +60,24 @@
 
 .coolinput label.text {
   font-size: 0.75rem;
-  color: #818CF8;
+  color: var(--color-primary);
   font-weight: 700;
   position: relative;
   top: 0.5rem;
   margin: 0 0 0 7px;
   padding: 0 3px;
-  background: #e8e8e8;
+  background: var(--color-background);
   width: fit-content;
 }
 
 .coolinput input[type=text].input {
   padding: 11px 10px;
-  color: #707bda;
-  font-size: 0.75rem;
-  border: 2px #818CF8 solid;
+  color: var(--color-primary);
+  font-size: 0.85rem;
+  border: 2px var(--color-secondary) solid;
   border-radius: 5px;
   background: #e8e8e8;
+  width: 15rem;
 }
 
 .coolinput input[type=text].input:focus {
@@ -99,14 +94,35 @@
 
 .send-button {
   background-color: #e8e8e8;
-  border: #818CF8 solid 2px;
-  color: #818CF8;
-  padding: 5px;
+  border: var(--color-secondary) solid 2px;
+  color: var(--color-primary);
+  padding: 10px;
   font-weight: 700;
   border-radius: 2px;
   position: relative;
-  top: 10px;
+  top: 9px;
   border-radius: 5px;
   font-size: 14px;
 }
 
+.success-message {
+  color: #F3A632;
+  font-weight: 500;
+  text-shadow: rgb(255, 255, 255) 0.02em 0.02em 0.03em
+}
+
+.error-message {
+  color: var(--color-primary);
+  font-weight: 600;
+  text-shadow: rgb(255, 255, 255) 0.02em 0.02em 0.03em
+}
+
+@media (max-width: 768px) {
+  .form-style {
+    flex-direction: column;
+  }
+
+  .coolinput {
+    max-width: 100%;
+  }
+}

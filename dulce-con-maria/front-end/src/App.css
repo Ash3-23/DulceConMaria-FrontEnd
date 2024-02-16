@@ -15,7 +15,7 @@
 
 html {
   scroll-behavior: smooth;
-  
+
 }
 
 body {
@@ -51,7 +51,12 @@ figure {
 }
 
 
-form, input, select, textarea, button, label{
+form,
+input,
+select,
+textarea,
+button,
+label {
   display: block;
   font-family: inherit;
   font-size: inherit;
@@ -61,17 +66,21 @@ form, input, select, textarea, button, label{
 
 /* CSS GENERAL */
 :root {
-  --color-primary: #FFFF;
-  --color-secondary: #04B4E0;
-  --color-background: #f6c8c3;
-  --color-transparent: transparent;
-  --color-icon: #B5B6B7;
+  --color-primary: #F47153;
+  --color-secondary: #F3A632;
+  --color-pink: #F7B3CC;
+  --color-med-tone: #FDE2D9;
+  --color-background: #F3E7D7;
+  --color-icon: #2558D5;
+  --color-borders: #8DAEF5;
   --color-subtitle: #8C8C8C;
   --color-title: #222222;
-  --color-text: #555;
+  /* --color-text: #555;  configurar */
+  --color-transparent: transparent;
+
 }
 
-body{
+body {
   width: 100%;
   height: 100%;
 }

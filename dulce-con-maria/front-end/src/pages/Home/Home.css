@@ -1,8 +1,9 @@
 .App {
   text-align: center;
 }
+
 .App-header {
-  background-color:#F3E7D7;
+  background-color: #F3E7D7;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -10,24 +11,50 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.header__background {
   background-image: url('../../assets/images/chocolate.png');
-  background-size: cover; /* Ajusta la imagen de fondo para que cubra todo el contenedor */
-  background-position: center; /* Centra la imagen de fondo */
+  background-repeat: no-repeat;
+  /* Evita que la imagen de fondo se repita */
+  background-position: right;
+  /* Centra la imagen de fondo */
   background-size: contain;
   height: 100vh;
   width: 100%;
-  z-index: 2;
 }
 
-.header__title{
+@media (max-width: 900px) {
+  .header__background {
+    background-position: bottom;
+  }
+}
+
+
+
+.header__container-text {
+  height: 100%;
+  padding-top: 9%;
+}
+
+.header__title {
   font-family: "Cormorant Garamond", serif;
   font-weight: 700;
   font-style: normal;
   font-size: 6rem;
   color: #F47153;
+  text-shadow: rgb(255, 255, 255) 0.02em 0.02em 0.03em
 }
 
-.header__h6{
+@media (max-width: 768px) {
+  h1.header__title {
+    line-height: 100%;
+    letter-spacing: 1px;
+  }
+
+}
+
+.header__h6 {
   margin-bottom: 5rem;
   margin-top: 1rem;
   color: #F3A632;
@@ -35,15 +62,30 @@
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: italic;
+  font-size: 1.5rem;
   letter-spacing: 0.15rem;
 }
 
-.header__prox{
-  font-size: 1.2rem;
+@media (max-width: 768px) {
+  .header__h6 {
+    font-size: 1.2rem;
+  }
+
+}
+
+.header__prox {
+  font-size: 1.75rem;
   color: #F3A632;
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0.3rem;
+}
+
+@media (max-width: 768px) {
+  .header__prox {
+    font-size: 1.4rem;
+  }
+
 }

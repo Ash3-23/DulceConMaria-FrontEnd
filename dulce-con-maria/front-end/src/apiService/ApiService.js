@@ -16,6 +16,7 @@ const ApiService = {
       console.log(response.data, 'respuesta del server');
       return response.data;
     } catch (error) {
+      console.log(error, 'este es el error')
       throw new Error(`Error al registrar correo electrónico: ${error.message}`);
     }
   },

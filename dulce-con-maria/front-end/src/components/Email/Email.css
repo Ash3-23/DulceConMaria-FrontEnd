@@ -70,7 +70,7 @@
   width: fit-content;
 }
 
-.coolinput input[type=text].input {
+.coolinput input[type=email].input {
   padding: 11px 10px;
   color: var(--color-primary);
   font-size: 0.85rem;
@@ -80,7 +80,7 @@
   width: 15rem;
 }
 
-.coolinput input[type=text].input:focus {
+.coolinput input[type=email].input:focus {
   outline: none;
 }
 

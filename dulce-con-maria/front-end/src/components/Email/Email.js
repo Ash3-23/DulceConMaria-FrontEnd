@@ -72,7 +72,7 @@ function EmailInputButton() {
           <div className="coolinput">
             <label htmlFor="input" class="text">email:</label>
             <input
-              type="text"
+              type="email"
               placeholder="Introduce tu correo"
               name="input"
               className="input"

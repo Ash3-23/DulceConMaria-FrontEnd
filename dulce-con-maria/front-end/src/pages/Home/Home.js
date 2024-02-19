@@ -11,6 +11,7 @@ const Home = () => {
             <h6 className='header__prox'>PRÓXIMAMENTE</h6>
             <h1 className='header__title'>Dulce con María</h1>
             <h6 className='header__h6'>¿Quieres saber más?</h6>
+            <h1>HOLAAAAAAAA</h1>
             <EmailInputButton />
           </div>
         </div>

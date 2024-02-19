@@ -1,20 +1,32 @@
-name: Deploy to Firebase Hosting on PR
+name: Deploy to Firebase Hosting
+
 on:
-  pull_request:
+  push:
+    branches:
+      - main # Cambia esto por el nombre de la rama principal de tu repositorio
+
 jobs:
-  build_and_preview:
-    if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
-      - name: Install dependencies and build
-        run: |
-          cd front-end  # Cambia al directorio front-end
-          npm install   # Instala las dependencias
-          npm run build # Ejecuta el script de construcción
-      - name: Deploy to Firebase
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install Node.js and npm
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_DULCECONMARIA_1CC5B }}'
-          projectId: dulceconmaria-1cc5b
+          repoToken: ${{ secrets.GITHUB_TOKEN }} # Asegúrate de que tienes esta variable de entorno configurada en los secretos de tu repositorio
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DULCECONMARIA_1CC5B }} # Cambia esto por el nombre de tu clave de servicio de Firebase
+          projectId: dulceconmaria-1cc5b # Cambia esto por el ID de tu proyecto de Firebase

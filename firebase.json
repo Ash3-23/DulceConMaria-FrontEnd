@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dulce-con-maria/front-end/build",
+    "public": "dulce-con-maria/front-end/public",
     "ignore": [
       "firebase.json",
       "**/.*",

@@ -1,29 +1,36 @@
-name: Deploy to Firebase Hosting on PR
+name: Deploy to Firebase
 
 on:
-  pull_request:
+  push:
     branches:
-      - develop
+      - main
 
 jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout repository
+      - name: Checkout del código fuente
         uses: actions/checkout@v2
-
-      - name: Change directory to front-end
-        run: cd front-end
-
-      - name: Install dependencies and build
-        run: |
-          npm install
-          npm run build
-
-      - name: Deploy to Firebase
+        
+      - name: Setup de Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '14.x'
+          
+      - name: Instalar dependencias
+        run: npm install
+        
+      - name: Construir la aplicación
+        run: npm run build
+        
+      - name: Firebase Deploy
+        uses: w9jds/firebase-action@v2
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: ${{ secrets.FIREBASE_TOKEN }}
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DULCECONMARIA_1CC5B }}
           projectId: dulceconmaria-1cc5b
+          

@@ -21,7 +21,7 @@ jobs:
           npm install -g vite
         if: success()
       - name: Construir la aplicación React
-        run: npm run build --prefix front-end
+        run: npm run build --prefix front-end/build
       - name: Firebase Deploy
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:

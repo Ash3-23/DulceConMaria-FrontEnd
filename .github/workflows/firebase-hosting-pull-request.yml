@@ -33,3 +33,5 @@ jobs:
         repoToken: ${{ secrets.FIREBASE_TOKEN }}
         firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DULCECONMARIA_1CC5B }}
         projectId: dulceconmaria-1cc5b
+        channelId: ${{ secrets.CHANNEL_ID }}
+

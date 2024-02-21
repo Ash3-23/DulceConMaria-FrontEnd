@@ -1,4 +1,4 @@
-name: Deploy to Firebase
+name: Deploy to Firebase Hosting on PR
 
 on:
   push:
@@ -25,7 +25,6 @@ jobs:
         run: npm run build
         
       - name: Firebase Deploy
-        uses: w9jds/firebase-action@v2
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           args: deploy --only hosting
@@ -33,4 +32,3 @@ jobs:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DULCECONMARIA_1CC5B }}
           projectId: dulceconmaria-1cc5b
-          

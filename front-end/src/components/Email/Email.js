@@ -70,12 +70,14 @@ function EmailInputButton() {
       ) : (
         <form className='form-style' onSubmit={handleSubmit}>
           <div className="coolinput">
-            <label htmlFor="input" className="text">email:</label>
+            <label htmlFor="email" className="text">email:</label>
             <input
               type="email"
               placeholder="Introduce tu correo"
+              id='email'
               name="input"
               className="input"
+              autoComplete="email"
               value={email}
               onChange={handleInputChange} />
           </div>

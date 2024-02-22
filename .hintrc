@@ -16,7 +16,8 @@
           "-ms-filter",
           "-webkit-text-size-adjust",
           "-webkit-tap-highlight-color",
-          "text-decoration-skip-ink"
+          "text-decoration-skip-ink",
+          "width: fit-content"
         ]
       }
     ]

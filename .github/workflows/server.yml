@@ -1,4 +1,4 @@
-name: Run Backend Server
+name: Deploy Server
 
 on:
   push:
@@ -6,20 +6,19 @@ on:
       - main
 
 jobs:
-  start-backend-server:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout código fuente
+      - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '14.x'
+      - name: Install Renderctl
+        run: |
+          curl -o renderctl https://render.com/static/renderctl-latest-linux-amd64
+          chmod +x renderctl
+          sudo mv renderctl /usr/local/bin/
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Start Backend Server
-        run: npm start
+      - name: Start server on Render
+        run: |
+          renderctl service update srv-cnbjiq8l6cac73egku00 --start

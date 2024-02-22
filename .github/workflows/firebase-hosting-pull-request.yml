@@ -1,4 +1,4 @@
-name: Build and Deploy
+name: Firebase Hosting PR
 
 on:
   push:

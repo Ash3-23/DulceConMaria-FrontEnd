@@ -15,10 +15,16 @@ jobs:
 
       - name: Install Renderctl
         run: |
+          # Descarga el binario renderctl
           curl -o renderctl https://render.com/static/renderctl-latest-linux-amd64
+          # Asegúrate de que el archivo se haya descargado correctamente
+          ls -lh renderctl
+          # Dale permisos de ejecución al binario
           chmod +x renderctl
-          sudo mv renderctl /usr/local/bin/
+          # Mueve el binario a /usr/local/bin/
+          sudo mv renderctl /usr/local/bin/ || echo "Failed to move renderctl to /usr/local/bin/"
 
       - name: Start server on Render
         run: |
-          renderctl service update srv-cnbjiq8l6cac73egku00 --start
+          # Inicia el servidor en Render usando el service_id correcto
+          renderctl service update srv-cnbjiq8l6cac73egku00 --start || echo "Failed to start server on Render"

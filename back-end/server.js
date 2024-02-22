@@ -3,6 +3,16 @@ const express = require("express");
 const cors = require("cors");
 // const fileupload = require("express-fileupload")
 
+//FIREBASE-ADMIN
+const admin = require('firebase-admin');
+const serviceAccount = require('./firebase/serviceAccountKey.json');
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: 'https://dulceconmaria-1cc5b-default-rtdb.europe-west1.firebasedatabase.app/'
+});
+
+
 // require("dotenv").config();
 
 const app = express();
@@ -36,6 +46,14 @@ app.use("/users", users);
 app.use('/email', emailRoutes); // Usa las rutas de correos electrónicos
 
 
+// Leer datos de la base de datos de Firebase
+const db = admin.database();
+const ref = db.ref('ruta/a/tus/datos');
+
+ref.once('value', (snapshot) => {
+  const data = snapshot.val();
+  console.log(data);
+});
 
 app.listen(port, () => {
     console.log(`Conectados correctamente al servidor, ${port}`);

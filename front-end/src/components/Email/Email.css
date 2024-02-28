@@ -135,12 +135,12 @@
   transform-origin: center;
   animation: rotate4 2s linear infinite;
   position: relative;
-  top: 0.5rem;
+  top: 0.8rem;
  }
  
  .loader__circle {
   fill: none;
-  stroke: hsl(214, 97%, 59%);
+  stroke: var(--color-secondary);
   stroke-width: 2;
   stroke-dasharray: 1, 200;
   stroke-dashoffset: 0;

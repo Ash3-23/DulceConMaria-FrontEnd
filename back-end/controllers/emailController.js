@@ -22,13 +22,14 @@ const registrarCorreo = async (req, res) => {
     // Guardar el nuevo correo electrónico en la base de datos
     await nuevoCorreo.save();
 
-    console.log(email)
+    console.log(email, 'Esto no se que es')
 
     // Enviar correo electrónico de bienvenida
     await enviarCorreoBienvenida(email);
 
     // Enviar una respuesta de éxito al cliente
     res.status(201).json({ message: 'Correo electrónico registrado correctamente', email: nuevoCorreo });
+    console.log(nuevoCorreo, 'este es el nuevo correo')
   } catch (error) {
     // Si ocurre algún error durante el proceso, enviar un mensaje de error
     console.error(error);

@@ -37,9 +37,6 @@ function EmailInputButton() {
       console.error('Error al enviar el correo electrónico:', error.message);
       setErrorMessage('Ha habido un error y no se ha podido registrar.\nPor favor revisa tu correo');
       setSuccessMessage('');
-      setTimeout(() => {
-        setLoading(true); // Ocultar spinner de carga después de 3 segundos
-      }, 5000);
     }
   };
 

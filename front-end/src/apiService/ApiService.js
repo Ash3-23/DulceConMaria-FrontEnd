@@ -1,5 +1,3 @@
-// apiService.js
-
 import axios from 'axios';
 
 const apiService = axios.create({
@@ -13,10 +11,20 @@ const ApiService = {
   async registrarCorreo(email) {
     try {
       const response = await apiService.post('/email', { email });
-      console.log(response.data, 'respuesta del server');
-      return response.data;
+
+      // Verificar el código de estado de la respuesta
+      if (response.status === 200) {
+        console.log('Correo electrónico registrado correctamente');
+        return response.data;
+      } else if (response.status === 400) {
+        console.log('El correo electrónico ya está registrado');
+        return response.data;
+      } else {
+        console.log('Error desconocido al registrar correo electrónico:', response.statusText);
+        throw new Error('Error desconocido al registrar correo electrónico');
+      }
     } catch (error) {
-      console.log(error, 'este es el error')
+      console.error('Error al registrar correo electrónico:', error.message);
       throw new Error(`Error al registrar correo electrónico: ${error.message}`);
     }
   },

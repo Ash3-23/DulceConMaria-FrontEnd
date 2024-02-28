@@ -1,12 +1,23 @@
 const { default: mongoose } = require("mongoose");
 const express = require("express");
 const cors = require("cors");
+const nodemailer = require('nodemailer');
+
 
 //Environment
 require("dotenv").config();
 //FIREBASE-ADMIN
 const admin = require('firebase-admin');
 const serviceAccount = require('./firebase/serviceAccountKey.json');
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_USER, // Obtener el usuario y contraseña de variables de entorno o archivo .env
+    pass: process.env.EMAIL_PASSWORD
+  }
+});
+
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -42,6 +53,6 @@ ref.once('value', (snapshot) => {
 });
 
 app.listen(port, () => {
-    console.log(`Conectados correctamente al servidor, ${port}`);
+  console.log(`Conectados correctamente al servidor, ${port}`);
 })
 

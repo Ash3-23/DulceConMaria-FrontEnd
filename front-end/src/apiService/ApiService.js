@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiService = axios.create({
-  baseURL: 'http://localhost:4000',
+  baseURL: 'https://dulceconmaria-server.onrender.com',
   headers: {
     'Content-Type': 'application/json',
   },

@@ -38,8 +38,8 @@ function EmailInputButton() {
       setErrorMessage('Ha habido un error y no se ha podido registrar.\nPor favor revisa tu correo');
       setSuccessMessage('');
       setTimeout(() => {
-        setLoading(false); // Ocultar spinner de carga después de 3 segundos
-      }, 3000);
+        setLoading(true); // Ocultar spinner de carga después de 3 segundos
+      }, 5000);
     }
   };
 
@@ -90,11 +90,14 @@ function EmailInputButton() {
 
           {loading ? (
             <div className="spinner-border" role="status">
-              <span className="loader">Cargando...</span>
+              <svg className='spinner__loader' viewBox="25 25 50 50">
+                <circle className='loader__circle' r="20" cy="50" cx="50"></circle>
+              </svg>
             </div>
           ) : (
             <button className='send-button' type="submit">Enviar</button>
-          )}        </form>
+          )}
+        </form>
       )}
 
     </div>

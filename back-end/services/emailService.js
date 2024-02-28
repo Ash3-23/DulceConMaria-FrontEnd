@@ -18,7 +18,7 @@ const enviarCorreoBienvenida = async (email) => {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: email, // La dirección de correo electrónico del destinatario
-      subject: '¡Bienvenido a nuestro sitio!', // Asunto del correo electrónico
+      subject: '¡Bienvenido/a a Dulce con María!', // Asunto del correo electrónico
       text: '¡Hola! Bienvenido a nuestro sitio web. Esperamos que disfrutes de tu experiencia.', // Contenido del correo electrónico
     };
 

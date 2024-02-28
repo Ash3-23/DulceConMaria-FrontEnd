@@ -1,4 +1,6 @@
 const Email = require('../models/email');
+const { enviarCorreoBienvenida } = require('../services/emailService');
+
 
 // Controlador para manejar la solicitud POST para registrar un nuevo correo electrónico
 const registrarCorreo = async (req, res) => {
@@ -19,6 +21,11 @@ const registrarCorreo = async (req, res) => {
 
     // Guardar el nuevo correo electrónico en la base de datos
     await nuevoCorreo.save();
+
+    console.log(email)
+
+    // Enviar correo electrónico de bienvenida
+    await enviarCorreoBienvenida(email);
 
     // Enviar una respuesta de éxito al cliente
     res.status(201).json({ message: 'Correo electrónico registrado correctamente', email: nuevoCorreo });

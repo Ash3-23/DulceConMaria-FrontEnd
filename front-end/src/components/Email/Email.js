@@ -7,6 +7,7 @@ function EmailInputButton() {
   const [email, setEmail] = useState('');
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [loading, setLoading] = useState(false);
 
   const handleButtonClick = () => {
     setShowInput(true);
@@ -24,6 +25,7 @@ function EmailInputButton() {
       return;
     }
     try {
+      setLoading(true);
       await ApiService.registrarCorreo(email); // Envía el correo electrónico al backend utilizando el servicio de API
       console.log('Correo electrónico enviado:', email);
       setEmail('');
@@ -31,9 +33,13 @@ function EmailInputButton() {
       setSuccessMessage('¡Correo electrónico registrado correctamente!');
       setErrorMessage('');
     } catch (error) {
+      setLoading(false);
       console.error('Error al enviar el correo electrónico:', error.message);
       setErrorMessage('Ha habido un error y no se ha podido registrar.\nPor favor revisa tu correo');
       setSuccessMessage('');
+      setTimeout(() => {
+        setLoading(false); // Ocultar spinner de carga después de 3 segundos
+      }, 3000);
     }
   };
 
@@ -82,8 +88,13 @@ function EmailInputButton() {
               onChange={handleInputChange} />
           </div>
 
-          <button className='send-button' type="submit">Enviar</button>
-        </form>
+          {loading ? (
+            <div className="spinner-border" role="status">
+              <span className="loader">Cargando...</span>
+            </div>
+          ) : (
+            <button className='send-button' type="submit">Enviar</button>
+          )}        </form>
       )}
 
     </div>

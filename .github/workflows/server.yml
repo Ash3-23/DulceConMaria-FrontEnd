@@ -24,7 +24,20 @@ jobs:
           # Mueve el binario a /usr/local/bin/
           sudo mv renderctl /usr/local/bin/ || echo "Failed to move renderctl to /usr/local/bin/"
 
-      - name: Start server on Render
+      - name: Set up environment
         run: |
-          # Inicia el servidor en Render usando el service_id correcto
-          renderctl service update srv-cnbjiq8l6cac73egku00 --start || echo "Failed to start server on Render"
+          renderctl secret add RENDER_EMAIL_USER ${{ secrets.RENDER_EMAIL_USER }}
+          renderctl secret add RENDER_EMAIL_PASSWORD ${{ secrets.RENDER_EMAIL_PASSWORD }}
+
+      - name: Start server on Render
+        env:
+          RENDER_SERVICE_ID: ${{ secrets.RENDER_SERVICE_ID }}
+        run: |
+          # Iniciar el servidor en Render usando el service_id correcto
+          renderctl service update $RENDER_SERVICE_ID --start || echo "Failed to start server on Render"
+
+
+      # - name: Start server on Render
+      #   run: |
+      #     # Inicia el servidor en Render usando el service_id correcto
+      #     renderctl service update srv-cnbjiq8l6cac73egku00 --start || echo "Failed to start server on Render"

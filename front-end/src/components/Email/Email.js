@@ -34,7 +34,7 @@ function EmailInputButton() {
       setErrorMessage('');
     } catch (error) {
       setLoading(false);
-      console.error('Error al enviar el correo electrónico:', error.message);
+      console.error('Error que viene del servidor:', error.message);
       setErrorMessage('Ha habido un error y no se ha podido registrar.\nPor favor revisa tu correo');
       setSuccessMessage('');
     }

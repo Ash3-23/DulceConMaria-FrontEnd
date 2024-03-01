@@ -26,7 +26,7 @@ const registrarCorreo = async (req, res) => {
     res.status(201).json({ message: 'Correo electrónico registrado correctamente', email: nuevoCorreo });
   } catch (error) {
     console.error('Error al registrar el correo electrónico:', error);
-    res.status(500).json({ message: 'Error al registrar correo electrónico' });
+    res.status(500).json({ message: 'Error interno del servidor al registrar el correo electrónico' });
   }
 };
 

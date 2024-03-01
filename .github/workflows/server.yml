@@ -24,11 +24,14 @@ jobs:
           # Mueve el binario a /usr/local/bin/
           sudo mv renderctl /usr/local/bin/ || echo "Failed to move renderctl to /usr/local/bin/"
 
-      - name: Set up environment
+      - name: Add email user secret
         run: |
-          renderctl secret add RENDER_EMAIL_USER ${{ secrets.RENDER_EMAIL_USER }}
-          renderctl secret add RENDER_EMAIL_PASSWORD ${{ secrets.RENDER_EMAIL_PASSWORD }}
+          renderctl secret add RENDER_EMAIL_USER "${{ secrets.RENDER_EMAIL_USER }}"
           
+      - name: Add email password secret
+        run: |
+          renderctl secret add RENDER_EMAIL_PASSWORD "${{ secrets.RENDER_EMAIL_PASSWORD }}"
+
       - name: Start server on Render
         run: |
           # Inicia el servidor en Render usando el service_id correcto

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiService = axios.create({
-  baseURL: 'https://dulceconmaria-server.onrender.com', // solo me va con el localhost:4000
+  baseURL: 'http://localhost:4000', // solo me va con el localhost:4000
   headers: {
     'Content-Type': 'application/json',
   },

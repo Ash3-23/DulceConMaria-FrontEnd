@@ -1,0 +1,29 @@
+.container__navbar {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 95%;
+}
+
+.navbar__logo {
+  position: relative;
+  /* Hacemos que el contenedor del logo tenga una posición relativa */
+  width: 50%;
+  /* Ancho fijo */
+  height: auto;
+  /* Alto fijo */
+}
+
+.logo__img {
+  width: 100%;
+}
+
+.navbar__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20%;
+}
+
+.navbar__items {}

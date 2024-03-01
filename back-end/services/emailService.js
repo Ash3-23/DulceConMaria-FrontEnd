@@ -30,7 +30,6 @@ const enviarCorreoBienvenida = async (email) => {
     console.log('Correo electrónico de bienvenida enviado correctamente a:', email);
   } catch (error) {
     console.error('Error al enviar el correo electrónico de bienvenida:', error);
-    throw error;
   }
 };
 

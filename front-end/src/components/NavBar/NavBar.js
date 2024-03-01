@@ -1,8 +1,6 @@
 import React from 'react';
 import './NavBar.css'
 import logoMaria from '../../assets/images/Logo.png';
-import ellipse from '../../assets/images/Ellipse.png';
-import title from '../../assets/images/logoTitle.png';
 
 
 const NavBar = () => {

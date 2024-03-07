@@ -2,7 +2,8 @@
   margin: 0 auto;
   display: grid;
   grid-template-columns: 50% 50%;
-  width: 95%;
+  width: 90%;
+  margin-top: 1.5%;
 }
 
 .navbar__logo {
@@ -23,7 +24,19 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  gap: 20%;
+  gap: 12%;
 }
 
-.navbar__items {}
+.navbar__item {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #F990B7;
+}
+.navbar__item.inscription{
+  color: #FFFFFF;
+  background-color: #F990B7;
+  padding: 1px 15px 1px 15px;
+  border-radius: 10rem;
+}

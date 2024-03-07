@@ -1,5 +1,4 @@
 require('dotenv').config();
-
 const nodemailer = require('nodemailer');
 
 // Configurar el transportador de nodemailer
@@ -16,21 +15,19 @@ const transporter = nodemailer.createTransport({
 // Función para enviar correos electrónicos de bienvenida
 const enviarCorreoBienvenida = async (email) => {
   try {
-    // Configurar el correo electrónico
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: email, // La dirección de correo electrónico del destinatario
-      subject: '¡Bienvenido/a a Dulce con María!', // Asunto del correo electrónico
-      text: '¡Hola! Bienvenido a nuestro sitio web. Esperamos que disfrutes de tu experiencia.', // Contenido del correo electrónico
+      to: email,
+      subject: '¡Bienvenido/a a Dulce con María!',
+      text: '¡Hola! Bienvenido a nuestro sitio web. Esperamos que disfrutes de tu experiencia.',
     };
 
-    // Enviar el correo electrónico
     await transporter.sendMail(mailOptions);
-
-    console.log('Service - Correo electrónico de bienvenida enviado correctamente a:', email);
+    console.log('Correo de bienvenida enviado correctamente a:', email);
   } catch (error) {
-    console.error('Service - Error al enviar el correo electrónico de bienvenida:', error);
-    throw error;
+    console.error('Error al enviar el correo electrónico de bienvenida:', error);
+    // Aquí puedes decidir cómo manejar el error, como lanzar una excepción
+    // o simplemente imprimir un mensaje de error y continuar
   }
 };
 

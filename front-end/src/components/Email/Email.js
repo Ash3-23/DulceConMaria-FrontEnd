@@ -18,32 +18,36 @@ function EmailInputButton() {
   };
 
   const handleSubmit = async (event) => {
-    event.preventDefault();
-    if (!validateEmail(email)) {
-      setErrorMessage('Por favor, introduce una dirección de correo electrónico válida.');
-      setSuccessMessage('');
-      return;
-    }
     try {
+      event.preventDefault();
+      if (!validateEmail(email)) {
+        setErrorMessage('Por favor, introduce una dirección de correo electrónico válida.');
+        setSuccessMessage('');
+        return;
+      }
+  
       setLoading(true);
       const response = await ApiService.registrarCorreo(email);
       setLoading(false);
       setEmail('');
       setShowInput(false);
-      if (response.status === 200) {
+      if (response.message === 'Correo electrónico registrado correctamente') {
         setSuccessMessage('¡Correo electrónico registrado correctamente!');
         setErrorMessage('');
-      } else if (response.status === 400) {
+      }
+  
+    } catch (error) {
+      if (error.response && error.response.status === 400) {
         setErrorMessage('El correo electrónico ya está registrado. Por favor, introduce otro correo electrónico.');
         setSuccessMessage('');
+      } else {
+        setLoading(false);
+        console.error('Correo ya registrado en la base de datos', error);
+        setSuccessMessage('El correo electrónico ya está registrado. Por favor, introduce otro correo electrónico.');
       }
-    } catch (error) {
-      setLoading(false);
-      console.error('Error en el servidor:', error);
-      setErrorMessage('Ha habido un error y no se ha podido registrar. Por favor, revisa tu correo.');
-      setSuccessMessage('');
     }
   };
+  
 
   const validateEmail = (email) => {
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

@@ -1,5 +1,7 @@
 const Email = require('../models/email');
 const { enviarCorreoBienvenida } = require('../services/emailService');
+require('dotenv').config();
+
 
 const registrarCorreo = async (req, res) => {
   try {

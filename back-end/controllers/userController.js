@@ -19,7 +19,7 @@ const postEmail = async (req, res) => {
     });
 
     await user.save();
-    console.log(user, 'este es el email del usuario');
+    console.log(user, 'este es el email del usuario - UserController');
     
     return res.status(201).send({message: "Se ha registrado correctamente"});
   } catch (error) {

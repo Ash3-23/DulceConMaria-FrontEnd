@@ -8,7 +8,6 @@ function EmailInputButton() {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [loading, setLoading] = useState(false);
-  const [exists, setExists] = useState(false);
 
   const handleButtonClick = () => {
     setShowInput(true);
@@ -27,20 +26,21 @@ function EmailInputButton() {
     }
     try {
       setLoading(true);
-      await ApiService.registrarCorreo(email);
+      const response = await ApiService.registrarCorreo(email);
+      setLoading(false);
       setEmail('');
       setShowInput(false);
-      setSuccessMessage('¡Correo electrónico registrado correctamente!');
-      setErrorMessage('');
+      if (response.status === 200) {
+        setSuccessMessage('¡Correo electrónico registrado correctamente!');
+        setErrorMessage('');
+      } else if (response.status === 400) {
+        setErrorMessage('El correo electrónico ya está registrado. Por favor, introduce otro correo electrónico.');
+        setSuccessMessage('');
+      }
     } catch (error) {
       setLoading(false);
       console.error('Error en el servidor:', error);
-      if (error.response && error.response.status === 400) {
-        setExists(true);
-        setErrorMessage('El correo electrónico ya está registrado. Por favor, introduce otro correo electrónico.');
-      } else {
-        setErrorMessage('Ha habido un error y no se ha podido registrar. Por favor, revisa tu correo.');
-      }
+      setErrorMessage('Ha habido un error y no se ha podido registrar. Por favor, revisa tu correo.');
       setSuccessMessage('');
     }
   };
@@ -53,11 +53,7 @@ function EmailInputButton() {
   return (
     <div className='email-input__container'>
       {successMessage && <div className="success-message">{successMessage}</div>}
-      {errorMessage && (
-        <div className="error-message">
-          {errorMessage}
-        </div>
-      )}
+      {errorMessage && <div className="error-message">{errorMessage}</div>}
       {!showInput ? (
         <button className="btn" onClick={handleButtonClick}>
           <svg height="24" width="24" fill="#FFFFFF" viewBox="0 0 24 24" data-name="Layer 1" id="Layer_1" className="sparkle">

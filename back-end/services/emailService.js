@@ -26,8 +26,6 @@ const enviarCorreoBienvenida = async (email) => {
     console.log('Correo de bienvenida enviado correctamente a:', email);
   } catch (error) {
     console.error('Error al enviar el correo electrónico de bienvenida:', error);
-    // Aquí puedes decidir cómo manejar el error, como lanzar una excepción
-    // o simplemente imprimir un mensaje de error y continuar
   }
 };
 

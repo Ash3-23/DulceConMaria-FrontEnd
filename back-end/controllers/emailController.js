@@ -6,27 +6,28 @@ const registrarCorreo = async (req, res) => {
     const { email } = req.body;
     
     // Registrar la recepción del correo electrónico
-    console.log('Correo electrónico recibido:', email);
+    console.log('Controller - Correo electrónico recibido:', email);
 
     const existeCorreo = await Email.findOne({ email });
     
     if (existeCorreo) {
-      return res.status(400).json({ message: 'El correo electrónico ya está registrado' });
+      console.log({message}, 'correo registrado - emailController')
+      return res.status(400).json({ message: 'Controller - El correo electrónico ya está registrado' });
     }
 
     const nuevoCorreo = new Email({ email });
     await nuevoCorreo.save();
 
     // Registrar el correo electrónico guardado en la base de datos
-    console.log('Correo electrónico guardado en la base de datos:', nuevoCorreo);
+    console.log('Controller - Correo electrónico guardado en la base de datos:', nuevoCorreo);
 
     // Enviar correo electrónico de bienvenida
     await enviarCorreoBienvenida(email);
 
-    res.status(201).json({ message: 'Correo electrónico registrado correctamente', email: nuevoCorreo });
+    res.status(201).json({ message: 'Controller - Correo electrónico registrado correctamente', email: nuevoCorreo });
   } catch (error) {
-    console.error('Error al registrar el correo electrónico:', error);
-    res.status(500).json({ message: 'Error interno del servidor al registrar el correo electrónico' });
+    console.error('Controller - Error al registrar el correo electrónico:', error);
+    res.status(500).json({ message: 'Controller - Error al registrar correo electrónico' });
   }
 };
 

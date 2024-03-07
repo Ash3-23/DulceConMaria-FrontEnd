@@ -19,7 +19,6 @@ const registrarCorreo = async (req, res) => {
     console.log('Controller - Correo electrónico guardado en la base de datos:', nuevoCorreo);
 
     await enviarCorreoBienvenida(email);
-    console.log(enviarCorreoBienvenida(email));
     res.status(200).json({ message: 'Correo electrónico registrado correctamente', email: nuevoCorreo });
   } catch (error) {
     console.error('Controller - Error al registrar el correo electrónico:', error);

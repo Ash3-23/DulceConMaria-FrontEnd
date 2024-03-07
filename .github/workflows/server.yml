@@ -1,5 +1,9 @@
 name: Deploy Server
 
+env:
+    EMAIL_USER: ${{ secrets.EMAIL_USER }}
+    EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
+
 on:
   push:
     branches:

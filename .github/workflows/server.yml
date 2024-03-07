@@ -1,9 +1,5 @@
 name: Deploy Server
 
-env:
-    EMAIL_USER: ${{ secrets.EMAIL_USER }}
-    EMAIL_PASSWORD: ${{ secrets.EMAIL_PASSWORD }}
-
 on:
   push:
     branches:
@@ -19,16 +15,24 @@ jobs:
 
       - name: Install Renderctl
         run: |
-          # Descarga el binario renderctl
           curl -o renderctl https://render.com/static/renderctl-latest-linux-amd64
-          # Asegúrate de que el archivo se haya descargado correctamente
           ls -lh renderctl
-          # Dale permisos de ejecución al binario
           chmod +x renderctl
-          # Mueve el binario a /usr/local/bin/
           sudo mv renderctl /usr/local/bin/ || echo "Failed to move renderctl to /usr/local/bin/"
 
-      - name: Start server on Render
+      - name: Install Node.js and NPM
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Set up environment variables
         run: |
-          # Inicia el servidor en Render usando el service_id correcto
+          echo "EMAIL_USER=${{ secrets.EMAIL_USER }}" >> .env
+          echo "EMAIL_PASSWORD=${{ secrets.EMAIL_PASSWORD }}" >> .env
+
+      - name: Deploy to Render
+        run: |
           renderctl service update srv-cnbjiq8l6cac73egku00 --start || echo "Failed to start server on Render"

@@ -34,9 +34,38 @@
   font-style: normal;
   color: #F990B7;
 }
-.navbar__item.inscription{
+
+.navbar__item.inscription {
   color: #FFFFFF;
   background-color: #F990B7;
   padding: 1px 15px 1px 15px;
   border-radius: 10rem;
+}
+
+.navbar__burger {
+  display: none;
+}
+
+@media (max-width: 578px) {
+  .navbar__logo {
+    width: 60%;
+  }
+}
+
+
+
+@media (max-width: 578px) {
+  .navbar__logo {
+    width: 60%;
+  }
+
+  .navbar__links {
+    display: none;
+  }
+
+  .navbar__burger {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
 }

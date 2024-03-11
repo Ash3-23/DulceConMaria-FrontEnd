@@ -74,7 +74,9 @@ label {
   --color-icon: #2558D5;
   --color-borders: #8DAEF5;
   --color-subtitle: #8C8C8C;
-  --color-title: #222222;
+  --color-title: #2558D5;
+  --color-button: #F990B7;
+  --color-paragraph: #7A7C83;
   --color-backgrounds-home: #FEF1EC;
   /* --color-text: #555;  configurar */
   --color-transparent: transparent;

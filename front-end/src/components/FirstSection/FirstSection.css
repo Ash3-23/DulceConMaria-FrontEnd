@@ -1,0 +1,142 @@
+.wrapper__start-section {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.start-section__image {
+  align-items: center;
+}
+
+.start-image__choco {
+  position: relative;
+  left: 10%;
+  width: 95%;
+  z-index: 4;
+}
+
+.start-section__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 13%;
+  gap: 1.8rem;
+  line-height: 2rem;
+}
+
+.start-content__h4 {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 28px;
+  color: var(--color-title);
+
+}
+
+.start-content__h1 {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 1000;
+  font-style: normal;
+  font-size: 50px;
+  color: var(--color-title);
+}
+
+.start-content__p {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: mixed;
+  font-size: 18px;
+  color: var(--color-paragraph);
+}
+
+.start-content__p-span {
+  position: relative;
+  top: 2.4rem;
+  color: var(--color-pink);
+}
+
+.start-content__button {
+  position: relative;
+  top: 1.5rem;
+  background-color: var(--color-button);
+  color: white;
+  padding: 0 20px 0 20px;
+  border-radius: 3rem;
+}
+
+
+@media (max-width: 1278px) {
+  .start-image__choco {
+    left: 6%;
+    width: 100%;
+  }
+
+  .start-section__content {
+    padding: 5%;
+    gap: 1rem;
+    line-height: 1.4rem;
+  }
+
+  .start-content__h4 {
+    font-size: 18px;
+  }
+
+  .start-content__h1 {
+    font-size: 40px;
+  }
+
+  .start-content__p {
+    font-size: 12px;
+  }
+  .start-content__p-span {
+  top: 1rem;
+  }
+
+  .start-content__button {
+    font-size: 14px;
+    top: 0;
+    padding: 0 10px 0 10px
+  }
+}
+
+
+
+
+@media (max-width: 578px) {
+  .start-image__choco {
+    left: 4%;
+    width: 100%;
+  }
+  .wrapper__start-section {
+    display: flex;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+  }
+
+  .start-section__content {
+    gap: 0.6rem;
+  }
+
+  .start-content__h4 {
+    font-size: 13px;
+  }
+
+  .start-content__h1 {
+    font-size: 22px;
+  }
+
+  .start-content__p {
+    font-size: 12px;
+  }
+
+  .start-content__button {
+    font-size: 12px;
+    top: 1rem;
+    padding: 0 10px 0 10px
+  }
+}

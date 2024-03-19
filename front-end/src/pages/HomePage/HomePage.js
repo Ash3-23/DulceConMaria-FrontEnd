@@ -2,7 +2,7 @@ import React from 'react'
 import NavBar from '../../components/NavBar/NavBar';
 import './HomePage.css'
 import FirstSection from '../../components/FirstSection/FirstSection';
-import CurseContent from '../../components/CurseContent/CurseContent';
+import CurseContent from '../../components/CourseContent/CourseContent';
 
 const HomePage = () => {
   return (

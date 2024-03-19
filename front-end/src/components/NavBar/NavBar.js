@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './NavBar.css'
 import logoMaria from '../../assets/images/Logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 

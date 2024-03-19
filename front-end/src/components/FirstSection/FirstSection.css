@@ -43,6 +43,8 @@
   font-style: normal;
   font-size: 50px;
   color: var(--color-title);
+  font-size: clamp(20px, 4vw, 50px);
+
 }
 
 .start-content__p {
@@ -78,17 +80,17 @@
 
   .start-section__content {
     padding: 5%;
-    gap: 1rem;
     line-height: 1.4rem;
+    margin-bottom: 6%;
   }
 
   .start-content__h4 {
     font-size: 18px;
   }
 
-  .start-content__h1 {
+  /* .start-content__h1 {
     font-size: 40px;
-  }
+  } */
 
   .start-content__p {
     font-size: 12px;
@@ -126,9 +128,9 @@
     font-size: 13px;
   }
 
-  .start-content__h1 {
+  /* .start-content__h1 {
     font-size: 22px;
-  }
+  } */
 
   .start-content__p {
     font-size: 12px;

@@ -1,6 +1,8 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './NavBar.css'
 import logoMaria from '../../assets/images/Logo.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 
 
 const NavBar = () => {
@@ -10,6 +12,10 @@ const NavBar = () => {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+
+  const closeMenu = () => {
+    setShowMenu(false);
+  }
 
 
   return (
@@ -26,7 +32,7 @@ const NavBar = () => {
       </div>
       <div className='navbar__burger' onClick={toggleMenu}>
         <svg
-          width='24'
+          width='22'
           height='24'
           viewBox='0 0 24 24'
           fill='none'
@@ -34,26 +40,38 @@ const NavBar = () => {
         >
           <path
             d='M3 12H21'
-            stroke='black'
+            stroke='#F990B7'
             strokeWidth='2'
             strokeLinecap='round'
             strokeLinejoin='round'
           />
           <path
             d='M3 6H21'
-            stroke='black'
+            stroke='#F990B7'
             strokeWidth='2'
             strokeLinecap='round'
             strokeLinejoin='round'
           />
           <path
             d='M3 18H21'
-            stroke='black'
+            stroke='#F990B7'
             strokeWidth='2'
             strokeLinecap='round'
             strokeLinejoin='round'
           />
         </svg>
+        {showMenu && (
+          <div className="burger__dropdown-menu">
+            <ul className='dropdown-menu__links'>
+              <li className='dropdown-menu__links-back'>      <FontAwesomeIcon onClick={closeMenu} icon={faArrowLeft} />
+              </li>
+              <li className='dropdown-menu__links-item'>Curso</li>
+              <li className='dropdown-menu__links-item'>Recetas</li>
+              <li className='dropdown-menu__links-item'>Blog</li>
+              <li className='dropdown-menu__links-item inscription'>Inscribirme</li>
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );

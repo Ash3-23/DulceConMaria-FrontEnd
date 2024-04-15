@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './NavBar.css'
 import logoMaria from '../../assets/images/Logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,6 +9,7 @@ import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 const NavBar = () => {
 
   const [showMenu, setShowMenu] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -17,10 +18,25 @@ const NavBar = () => {
   const closeMenu = () => {
     setShowMenu(false);
   }
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
 
   return (
-    <div className='container__navbar'>
+    <div className={`container__navbar ${scrolling ? 'scrolling' : ''}`}>
       <div className='navbar__logo'>
         {/* <img className='logo__background' alt='background' src={ellipse} /> */}
         <img className='logo__img' alt='logo' src={logoMaria} />

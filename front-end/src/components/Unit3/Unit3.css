@@ -1,5 +1,5 @@
-.course-content__container-unit1 {
-  background-color: #F7B3CC;
+.course-content__container-unit3 {
+  background-color: #FAF6F0;
   width: 100%;
   height: 600px;
   color: #ffffff;
@@ -7,11 +7,11 @@
   grid-template-columns: 50% 40% 10%;
 }
 
-.course-content__content-unit1 {
+.course-content__content-unit3 {
   padding: 10% 10% 10% 20%;
 }
 
-.course-content__icon-choco {
+.course-content__icon-choco3 {
   margin-top: 4%;
   margin-bottom: 2%;
   width: 9%;
@@ -19,45 +19,48 @@
   border-radius: 3rem;
 }
 
-.course-content__title {
+.course-content__title3 {
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
+  color: #2558D5;
   font-size: clamp(18px, 4vw, 30px);
 }
 
-.course-content__unit {
+.course-content__unit3 {
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
   font-size: clamp(16px, 4vw, 28px);
-  color: #A93E65;
+  color: #2558D5;
 }
 
-.course-content__introduction {
+.course-content__introduction3 {
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
   font-weight: 900;
   font-style: normal;
+  color: #F7B3CC;
   font-size: clamp(22px, 4vw, 42px);
 }
 
 
-.course-content__list-modules {
+.course-content__list-modules3 {
   padding-top: 5%;
 }
 
-.course-content__module {
+.course-content__module3 {
   font-family: "Mulish", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+  color: #8DAEF5;
   font-size: clamp(10px, 4vw, 20px);
 }
 
-.course-content__show {
+.course-content__show3 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,27 +68,27 @@
   margin: 0 auto;
 }
 
-.course-content__show-image {
+.course-content__show-image3 {
   align-items: end;
   margin: 0 auto;
   width: 90%;
   flex-wrap: wrap;
 }
 
-.course-content__next {
+.course-content__next3 {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 4%;
 }
 
-.course-content__next-image {
+.course-content__next-image3 {
   width: 20%;
 }
 
 
 @media (max-width: 1278px) {
-  .course-content__show-image {
+  .course-content__show-image3 {
     align-items: end;
     margin: 0 auto;
     width: 80%;
@@ -93,7 +96,7 @@
 }
 
 @media (max-width: 778px) {
-  .course-content__container-unit1 {
+  .course-content__container-unit3 {
     flex-wrap: wrap;
   }
 }
@@ -101,15 +104,15 @@
 
 
 @media (max-width: 578px) {
-  .course-content__container {
+  .course-content__container3 {
     flex-wrap: wrap;
   }
 
-  .course-content__show {
+  .course-content__show3 {
     padding: 2% 0% 3% 0%;
   }
 
-  .course-content__next {
+  .course-content__next3 {
     display: none;
   }
 
@@ -117,36 +120,36 @@
 }
 
 @media (min-width: 1550px) {
-  .course-content__container {
+  .course-content__container3 {
     justify-content: flex-start;
     padding: 3%;
   }
 
-  .course-content__content {
+  .course-content__content3 {
     padding: 6% 0% 6% 9%;
   }
 
-  .course-content__icon-choco {
+  .course-content__icon-choco3 {
     width: 7%;
   }
 
-  .course-content__title {
+  .course-content__title3 {
     font-size: clamp(18px, 4vw, 38px);
   }
 
-  .course-content__unit {
+  .course-content__unit3 {
     font-size: clamp(16px, 4vw, 32px);
   }
 
-  .course-content__introduction {
+  .course-content__introduction3 {
     font-size: clamp(22px, 4vw, 48px);
   }
 
-  .course-content__module {
+  .course-content__module3 {
     font-size: clamp(10px, 4vw, 26px);
   }
 
-  .course-content__show {
+  .course-content__show3 {
     width: 80%;
   }
 }

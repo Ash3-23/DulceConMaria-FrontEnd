@@ -3,6 +3,7 @@ import './CourseContent.css';
 import Unit1 from '../Unit1/Unit1';
 import Unit2 from '../Unit2/Unit2';
 import Unit3 from '../Unit3/Unit3';
+import Unit4 from '../Unit4/Unit4';
 
 const CourseContent = () => {
   const [activeUnitIndex, setActiveUnitIndex] = useState(0);
@@ -30,6 +31,8 @@ const CourseContent = () => {
         return '#8DAEF5'; // Color de fondo para la unidad 2
       case 2:
         return '#FAF6F0'; // Color de fondo para la unidad 3
+      case 3:
+        return '#2558D5'; // Color de fondo para la unidad 3
       default:
         return '#F7B3CC'; // Color de fondo predeterminado
     }
@@ -45,6 +48,7 @@ const CourseContent = () => {
           {activeUnitIndex === 0 && <Unit1 changeUnit={changeUnit} />}
           {activeUnitIndex === 1 && <Unit2 changeUnit={changeUnit} />}
           {activeUnitIndex === 2 && <Unit3 changeUnit={changeUnit} />}
+          {activeUnitIndex === 3 && <Unit4 changeUnit={changeUnit} />}
         </div>
       </div>
     </div>

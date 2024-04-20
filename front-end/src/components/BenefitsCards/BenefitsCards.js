@@ -2,7 +2,7 @@ import React from 'react'
 
 const BenefitsCards = () => {
   return (
-    <div>BenefitsCards</div>
+    <div>Cartas de los beneficios del curso</div>
   )
 }
 

@@ -4,6 +4,7 @@ import './HomePage.css'
 import FirstSection from '../../components/FirstSection/FirstSection';
 import CurseContent from '../../components/CourseContent/CourseContent';
 import BenefitsCards from '../../components/BenefitsCards/BenefitsCards';
+import FixedBanner from '../../components/FixedBanner/FixedBanner';
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
       <FirstSection />
       <CurseContent />
       <BenefitsCards />
+      <FixedBanner />
 
     </div>
   )

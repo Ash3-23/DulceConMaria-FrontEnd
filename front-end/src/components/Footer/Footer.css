@@ -1,0 +1,11 @@
+.footer__container {
+  padding: 25px;
+  z-index: 20;
+  color: #2558D5;
+  position: relative;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+}

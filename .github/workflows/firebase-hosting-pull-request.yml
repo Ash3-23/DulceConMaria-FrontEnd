@@ -1,37 +1,37 @@
-name: Firebase Hosting PR
+# name: Firebase Hosting PR
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout código fuente
-      uses: actions/checkout@v2
+#     steps:
+#     - name: Checkout código fuente
+#       uses: actions/checkout@v2
 
-    - name: Setup de Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '21.6.2'
+#     - name: Setup de Node.js
+#       uses: actions/setup-node@v3
+#       with:
+#         node-version: '21.6.2'
 
-    - name: Instalar dependencias en la raíz
-      run: npm install
+#     - name: Instalar dependencias en la raíz
+#       run: npm install
 
-    - name: Instalar Serve globalmente
-      run: npm install -g serve
+#     - name: Instalar Serve globalmente
+#       run: npm install -g serve
 
-    - name: Construir la aplicación React
-      run: npm run build --prefix front-end
+#     - name: Construir la aplicación React
+#       run: npm run build --prefix front-end
 
-    - name: Firebase Deploy
-      uses: FirebaseExtended/action-hosting-deploy@v0
-      with:
-        repoToken: ${{ secrets.FIREBASE_TOKEN }}
-        firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DULCECONMARIA_1CC5B }}
-        projectId: dulceconmaria-1cc5b
-        channelId: ${{ secrets.CHANNEL_ID }}
+#     - name: Firebase Deploy
+#       uses: FirebaseExtended/action-hosting-deploy@v0
+#       with:
+#         repoToken: ${{ secrets.FIREBASE_TOKEN }}
+#         firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_DULCECONMARIA_1CC5B }}
+#         projectId: dulceconmaria-1cc5b
+#         channelId: ${{ secrets.CHANNEL_ID }}
 

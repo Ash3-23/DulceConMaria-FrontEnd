@@ -1,0 +1,65 @@
+.benefits-cards__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5%;
+  gap: 2rem;
+}
+
+.benefits-card__title-container {
+  padding-left: 40px;
+}
+
+.benefits-cards__title{
+  color: #2558D5;
+}
+
+.benefits-cards__content-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  /* Espacio entre las cards */
+}
+
+.benefits-card__card-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.benefits-cards__card {
+  width: 270px;
+  /* Ancho fijo para cada card */
+  height: 350px;
+  /* Altura automática */
+  background-color: #F8E4EB;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 25px;
+  /* Espacio interno de las cards */
+}
+
+.benefits-card__card-content {
+  gap: 3rem;
+}
+
+.benefits-cards__icon {
+  width: 30%;
+  /* Ancho del icono */
+  margin-bottom: 20px;
+  /* Espacio entre el icono y el texto */
+}
+
+.benefits-cards__description {
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16px;
+  color: #2558D5;
+}

@@ -1,74 +1,72 @@
-.fixed-banner__container{
-width: 100%;
-margin-top: 7%;
-}
-
-.fixed-banner__image{
-
-}
-
-.banner__image{
-  width: 100%;
-
-}
-
-.banner-description__container{
+.fixed-banner__container {
   position: relative;
-  z-index: 10;
-  bottom: 550px;
-  right: 310px;
-  width: 40%;
+  width: 100%;
+  margin-top: 6%;
 }
 
-.banner-description__title{
+.fixed-banner__image {
+  width: 100%;
+  height: 100vh;
+  background-image: url('../../assets/images/Rectangle 19.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+.banner-description__container {
+  position: absolute;
+  top: 50%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 50%;
+}
+
+.banner-description__wrapper {
+  padding: 20px;
+}
+
+.banner-description__title {
   color: #ffff;
   font-family: "Mulish", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 900;
-  font-style: normal;
   font-size: 42px;
   padding: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+.banner-description__description {
+  color: #ffff;
+  font-family: "Mulish", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  padding: 10px;
+  margin-top: 15px;
   width: 90%;
 }
 
-.banner-description__description{
-  color: #ffff;
+.banner-description__contact {
+  color: #f7b3cc;
   font-family: "Mulish", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-  font-size: 22px;
-  padding: 10px;
-  margin-top: 10px;
-
-}
-
-
-.banner-description__contact{
-  color: #F7B3CC;
-  font-family: "Mulish", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 600;
   font-style: italic;
   font-size: 22px;
   padding: 10px;
-  margin-top: 10px;
-
+  margin-bottom: 15px;
+  width: 70%;
 }
 
-
-.banner-description__button{
-  background-color: #F7B3CC;
+.banner-description__button {
+  background-color: #f7b3cc;
   color: #ffff;
-  width: 25%;
+  width: 150px;
   text-align: center;
   padding: 5px 15px 5px 15px;
-  border-radius: 1rem;
+  border-radius: 2rem;
   font-family: "Mulish", sans-serif;
-  font-optical-sizing: auto;
   font-weight: 600;
-  font-style: normal;
   font-size: 20px;
-  margin-top: 30px;
-  margin-left: 8px;
+  margin-left: 10px;
 }

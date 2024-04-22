@@ -1,0 +1,74 @@
+.fixed-banner__container{
+width: 100%;
+margin-top: 7%;
+}
+
+.fixed-banner__image{
+
+}
+
+.banner__image{
+  width: 100%;
+
+}
+
+.banner-description__container{
+  position: relative;
+  z-index: 10;
+  bottom: 550px;
+  right: 310px;
+  width: 40%;
+}
+
+.banner-description__title{
+  color: #ffff;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-size: 42px;
+  padding: 10px;
+  width: 90%;
+}
+
+.banner-description__description{
+  color: #ffff;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 22px;
+  padding: 10px;
+  margin-top: 10px;
+
+}
+
+
+.banner-description__contact{
+  color: #F7B3CC;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 22px;
+  padding: 10px;
+  margin-top: 10px;
+
+}
+
+
+.banner-description__button{
+  background-color: #F7B3CC;
+  color: #ffff;
+  width: 25%;
+  text-align: center;
+  padding: 5px 15px 5px 15px;
+  border-radius: 1rem;
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: 8px;
+}

@@ -9,3 +9,11 @@
   font-style: normal;
   font-size: 18px;
 }
+
+
+@media (max-width: 768px){
+  .footer__container{
+    font-size: 12px;
+    text-align: center;
+  }
+}

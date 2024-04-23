@@ -110,17 +110,12 @@
   .course-content__container-unit1 {
     flex-wrap: wrap;
     display: flex;
-    height: auto;
+    height: 65rem;
     margin: 0 auto;
     align-items: center;
     border-radius: 1rem;
     width: 90%;
     margin-top: 25px;
-    transition: .3s ease-in-out;
-  }
-
-  .course-content__container-unit1:hover {
-    transform: translateX(-1%);
     box-shadow: 14px -3px 20px 0px rgb(0 0 0 / 22%), 0 6px 18px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(0, 0, 0, 0.12);
   }
@@ -139,6 +134,10 @@
 @media (max-width: 578px) {
   .course-content__container {
     flex-wrap: wrap;
+  }
+
+  .course-content__container-unit4 {
+    height: 52rem;
   }
 
   .course-content__show {

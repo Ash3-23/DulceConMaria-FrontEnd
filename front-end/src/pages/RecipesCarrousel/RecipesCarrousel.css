@@ -1,0 +1,126 @@
+  .recetario__container {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+    height: auto;
+  }
+
+  .recetario-carousel__container {
+    margin-top: 10%;
+    width: 90%;
+    /* border: 2px solid black; */
+  }
+
+  .recetario__title {
+    color: #2558D5;
+    text-align: center;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+  }
+
+  .carousel__wrapper {
+    overflow: hidden;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 20px;
+    /* border: 2px solid black; */
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.2, 0.1, 0.5, 0.2);
+  }
+
+  .carousel-item {
+    flex: 0 0 auto;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .carousel-control__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 693%;
+    position: absolute;
+    top: 50%;
+    padding: 9px;
+    left: 44%;
+  }
+
+  .carousel-control {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: center;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+  }
+
+  .carousel-control:hover {
+    background-color: rgba(220, 18, 18, 0.695);
+  }
+
+  .carousel-control:first-child {
+    left: 0;
+  }
+
+  .carousel-control:last-child {
+    right: 0;
+  }
+
+  .carousel__wrapper-background{
+    height: 100vh;
+  }
+
+  .carousel__wrapper--leftCard {
+    background-color: #f8e4ebde;
+    border: 0.1px solid #f7b3cc7b;
+    border-radius: 0.6rem;
+    position: absolute;
+    width: 88%;
+    left: 6%;
+    top: 38%;
+    height: 147%;
+    box-shadow: -10px 0 10px -5px rgba(250, 229, 237, 1);
+    z-index: -1;
+  }
+
+  .carousel__wrapper--rightCard {
+    background-color: #f8e4ebde;
+    border: 0.1px solid #f7b3cc7b;
+    border-radius: 0.6rem;
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 34%;
+    height: 151%;
+    box-shadow: 10px 0 10px -5px rgba(250, 229, 237, 1);
+    z-index: -1;
+  }
+
+
+
+  @media only screen and (max-width: 768px) {
+    .carousel__wrapper--leftCard,
+    .carousel__wrapper--rightCard {
+      width: 10%;
+    }
+  }
+
+  @media only screen and (max-width: 576px) {
+    .carousel__wrapper--leftCard,
+    .carousel__wrapper--rightCard {
+      width: 5%;
+    }
+  }

@@ -98,6 +98,12 @@
 @media (max-width: 778px) {
   .course-content__container-unit4 {
     flex-wrap: wrap;
+    display: flex;
+    height: auto;
+  }
+
+  .course-content__content-unit4 {
+    padding: 4% 4% 2% 4%;
   }
 }
 

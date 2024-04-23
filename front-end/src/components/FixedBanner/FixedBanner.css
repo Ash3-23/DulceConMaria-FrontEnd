@@ -70,3 +70,34 @@
   font-size: 20px;
   margin-left: 10px;
 }
+
+
+
+@media (max-width: 1278px) {}
+
+@media (max-width: 778px) {
+
+  .fixed-banner__container {
+    margin-top: 10%;
+  }
+
+  .banner-description__container {
+    top: 45%;
+    width: 100%;
+    left: 55%;
+  }
+
+  .banner-description__wrapper {
+    padding: 0;
+  }
+
+  .fixed-banner__image {
+    height: 75vh;
+  }
+}
+
+
+
+@media (max-width: 578px) {}
+
+@media (min-width: 1550px) {}

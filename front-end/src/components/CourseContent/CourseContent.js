@@ -30,13 +30,13 @@ const CourseContent = () => {
       case 0:
         return '#FFFFFF'; // Color de fondo para la unidad 1
       case 1:
-        return '#8DAEF5'; // Color de fondo para la unidad 2
+        return '#FFFFFF'; // Color de fondo para la unidad 2
       case 2:
-        return '#FAF6F0'; // Color de fondo para la unidad 3
+        return '#FFFFFF'; // Color de fondo para la unidad 3
       case 3:
-        return '#2558D5'; // Color de fondo para la unidad 3
+        return '#FFFFFF'; // Color de fondo para la unidad 3
       default:
-        return '#F7B3CC'; // Color de fondo predeterminado
+        return '#FFFFFF'; // Color de fondo predeterminado
     }
   };
 

@@ -13,7 +13,7 @@ const FirstSection = () => {
         <h1 className='start-content__h1'>CHOCOLATERÍA</h1>
         <p className='start-content__p'>¡Descubre el mundo del chocolate con nuestro <strong>Curso Básico de Bombones de Chocolate! </strong>Aprende las técnicas fundamentales, desde el templado perfecto hasta la creación de exquisitos rellenos, todo desde la comodidad de tu hogar.<br />
           <span className='start-content__p-span'><strong>¡Inscríbete ahora y despierta tu creatividad dulce!</strong></span></p>
-        <div className='start-content__button'>Inscribirme ahora</div>
+        <div className='start-content__button'>Descargar Dossier</div>
       </div>
     </div>
   )

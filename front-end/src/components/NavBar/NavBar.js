@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './NavBar.css'
+import Recetas from '../../pages/Recetas/Recetas';
 import logoMaria from '../../assets/images/Logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
@@ -43,7 +45,9 @@ const NavBar = () => {
       </div>
       <div className={`navbar__links ${showMenu ? 'show' : ''}`}>
         <p className='navbar__item'>Curso</p>
-        <p className='navbar__item'>Recetas</p>
+        <Link to='/recetas'>
+          <p className='navbar__item'>Recetas</p>
+        </Link>
         <p className='navbar__item'>Blog</p>
         <p className='navbar__item inscription color'>Inscribirme</p>
       </div>

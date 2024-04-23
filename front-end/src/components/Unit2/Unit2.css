@@ -93,6 +93,7 @@
   from {
     transform: translateY(0);
   }
+
   to {
     transform: translateY(-5px);
   }
@@ -111,23 +112,20 @@
   .course-content__container-unit2 {
     flex-wrap: wrap;
     display: flex;
-    height: auto;
+    height: 65rem;
     margin: 0 auto;
     align-items: center;
     border-radius: 1rem;
     width: 90%;
     margin-top: 25px;
-    transition: .3s ease-in-out;
-  }
-
-  .course-content__container-unit2:hover {
-    transform: translateX(-1%);
     box-shadow: 14px -3px 20px 0px rgb(0 0 0 / 22%), 0 6px 18px rgba(0, 0, 0, 0.08);
     border: 1px solid rgba(0, 0, 0, 0.12);
   }
+
   .course-content__content-unit2 {
     padding: 4% 4% 2% 4%;
   }
+
   .course-content__next2 {
     display: none;
   }
@@ -138,6 +136,10 @@
 @media (max-width: 578px) {
   .course-content__container2 {
     flex-wrap: wrap;
+  }
+
+  .course-content__container-unit4 {
+    height: 52rem;
   }
 
   .course-content__show2 {

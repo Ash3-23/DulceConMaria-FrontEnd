@@ -85,6 +85,7 @@
 
 .course-content__next-image2 {
   width: 20%;
+  cursor: pointer;
   animation: bounce 0.5s infinite alternate;
 }
 

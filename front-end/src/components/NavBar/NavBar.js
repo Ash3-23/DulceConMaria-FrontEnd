@@ -45,7 +45,7 @@ const NavBar = () => {
         <p className='navbar__item'>Curso</p>
         <p className='navbar__item'>Recetas</p>
         <p className='navbar__item'>Blog</p>
-        <p className='navbar__item inscription'>Inscribirme</p>
+        <p className='navbar__item inscription color'>Inscribirme</p>
       </div>
       <div className='navbar__burger' onClick={toggleMenu}>
         <svg

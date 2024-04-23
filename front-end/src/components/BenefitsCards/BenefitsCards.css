@@ -74,7 +74,11 @@
 }
 
 
-@media (max-width: 1278px) {}
+@media (max-width: 1278px) {
+  .benefits-cards__card {
+    width: 40%;
+  } 
+}
 
 @media (max-width: 778px) {
   .benefits-cards__container {
@@ -89,7 +93,7 @@
   }
 
   .benefits-cards__card {
-    width: 185px;
+    width: 40%;
     height: 285px;
     padding: 15px;
   }

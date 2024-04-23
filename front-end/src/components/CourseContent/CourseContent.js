@@ -4,6 +4,8 @@ import Unit1 from '../Unit1/Unit1';
 import Unit2 from '../Unit2/Unit2';
 import Unit3 from '../Unit3/Unit3';
 import Unit4 from '../Unit4/Unit4';
+import { useSwipeable } from 'react-swipeable';
+
 
 const CourseContent = () => {
   const [activeUnitIndex, setActiveUnitIndex] = useState(0);
@@ -38,11 +40,14 @@ const CourseContent = () => {
     }
   };
 
+   // Hook para manejar el deslizamiento de unidades en la versión móvil
+  const handlers = useSwipeable({
+    onSwipedLeft: () => changeUnit((activeUnitIndex + 1) % 4),
+    onSwipedRight: () => changeUnit((activeUnitIndex + 3) % 4)
+  });
 
   return (
-
-
-    <div className='course-content__container' style={{ backgroundColor: backgroundColor() }}>
+    <div className='course-content__container' style={{ backgroundColor: backgroundColor() }} {...handlers}>
       <div className={`course-content__content ${animateRight ? 'animate-slide-right' : ''}`}>
         <div className='horizontal-scroll-container'>
           {activeUnitIndex === 0 && <Unit1 changeUnit={changeUnit} />}
@@ -52,7 +57,7 @@ const CourseContent = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default CourseContent
+export default CourseContent;

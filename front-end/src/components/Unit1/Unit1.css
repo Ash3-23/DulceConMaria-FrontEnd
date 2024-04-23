@@ -88,6 +88,7 @@
   .course-content__show-image {
     align-items: end;
     margin: 0 auto;
+    padding: 15px;
     width: 80%;
   }
 }
@@ -95,6 +96,20 @@
 @media (max-width: 778px) {
   .course-content__container-unit1 {
     flex-wrap: wrap;
+    display: flex;
+    height: auto;
+    margin: 0 auto;
+    align-items: center;
+    border-radius: 1rem;
+    width: 90%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 6px 18px rgba(0, 0, 0, 0.08); /* Agrega una sombra suave */
+  }
+
+  .course-content__content-unit1 {
+    padding: 4% 4% 2% 4%;
+  }
+  .course-content__next {
+    display: none;
   }
 }
 

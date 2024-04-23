@@ -98,9 +98,14 @@
 @media (max-width: 778px) {
   .course-content__container-unit3 {
     flex-wrap: wrap;
+    display: flex;
+    height: auto;
+  }
+
+  .course-content__content-unit3 {
+    padding: 4% 4% 2% 4%;
   }
 }
-
 
 
 @media (max-width: 578px) {

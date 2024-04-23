@@ -26,7 +26,7 @@ const CourseContent = () => {
   const backgroundColor = () => {
     switch (activeUnitIndex) {
       case 0:
-        return '#F7B3CC'; // Color de fondo para la unidad 1
+        return '#FFFFFF'; // Color de fondo para la unidad 1
       case 1:
         return '#8DAEF5'; // Color de fondo para la unidad 2
       case 2:

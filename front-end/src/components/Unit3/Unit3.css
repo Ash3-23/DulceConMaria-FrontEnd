@@ -116,6 +116,7 @@
     align-items: center;
     border-radius: 1rem;
     width: 90%;
+    margin-top: 25px;
     transition: .3s ease-in-out;
   }
 

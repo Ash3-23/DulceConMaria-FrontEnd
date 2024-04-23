@@ -49,9 +49,35 @@
 .navbar__item.inscription {
   color: #FFFFFF;
   background-color: #F990B7;
-  padding: 1px 15px 1px 15px;
+  padding: 1px 15px 2px 15px;
   border-radius: 10rem;
+  position: relative; /* Añade posición relativa */
+  overflow: hidden; /* Oculta el desplazamiento */
 }
+
+.navbar__item.inscription::before {
+  content: 'Inscribirme';
+  position: absolute;
+  top: 0;
+  left: -110%; /* Comienza fuera del botón */
+  width: 120px;
+  height: 100%;
+  padding: 1px 2px 2px 20px;
+  color: #FFFFFF;
+  background-color: rgba(245, 56, 126, 1);
+  transition: transform 0.3s ease; /* Agrega transición */
+  z-index: 3;
+}
+
+.navbar__item.inscription.color::before {
+  color: #FFFFFF;
+}
+
+
+.navbar__item.inscription:hover::before {
+  transform: translateX(100%); /* Desplaza hacia la derecha */
+}
+
 
 .navbar__burger {
   display: none;
@@ -113,7 +139,7 @@
 
   .navbar__logo {
     width: 60%;
-  } 
+  }
 
   .navbar__links {
     display: none;

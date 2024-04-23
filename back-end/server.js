@@ -27,9 +27,11 @@ mongoose.connect('mongodb+srv://nereatrebol2:TTxjK39mS2dspDGS@cluster0.p3y0lbb.m
 //Routes
 const users = require("./routes/usersRoute");
 const emailRoutes = require("./routes/emailRoute")
+const recipesRoute = require('./routes/recipesRoute');
 
 app.use("/users", users);
 app.use('/email', emailRoutes); // Usa las rutas de correos electrónicos
+app.use('/recipes', recipesRoute);
 
 
 // Leer datos de la base de datos de Firebase

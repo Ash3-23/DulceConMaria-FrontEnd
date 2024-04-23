@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiService = axios.create({
-  baseURL: 'https://dulceconmaria-server.onrender.com',
+  baseURL: 'http://localhost:4000',
   headers: {
     'Content-Type': 'application/json',
   },
@@ -19,6 +19,15 @@ const ApiService = {
       } else {
         console.error('Api - Error:', error.message);
       }
+    }
+  },
+  async obtenerRecetas() {
+    try {
+      const response = await apiService.get('/recipes');
+      return response.data;
+    } catch (error) {
+      console.error('Api - Error al obtener recetas:', error.message);
+      throw error;
     }
   },
 };

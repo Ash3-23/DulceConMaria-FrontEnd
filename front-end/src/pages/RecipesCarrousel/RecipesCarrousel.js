@@ -56,8 +56,9 @@ const RecipesCarousel = () => {
 
 
         <div className='carousel-control__wrapper'>
-          <img className='carousel-control' onClick={handlePrev} src={leftArrow}></img>
-          <img className='carousel-control' onClick={handleNext} src={rightArrow}></img></div>
+          <img className='carousel-control' onClick={handlePrev} src={leftArrow} alt="Flecha izquierda"></img>
+          <img className='carousel-control' onClick={handleNext} src={rightArrow} alt="Flecha derecha"></img>
+        </div>
       </div>
     </div>
   );

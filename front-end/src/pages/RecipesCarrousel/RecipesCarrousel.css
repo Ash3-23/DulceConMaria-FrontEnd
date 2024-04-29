@@ -6,8 +6,8 @@
   }
 
   .recetario-carousel__container {
-    margin-top: 10%;
-    width: 90%;
+    margin-top: 8%;
+    width: 100%;
     /* border: 2px solid black; */
   }
 
@@ -27,7 +27,7 @@
     flex-direction: row;
     justify-content: center;
     margin: 0 auto;
-    margin-top: 2%;
+    margin-top: 1%;
     margin-bottom: 20px;
     /* border: 2px solid black; */
   }
@@ -38,7 +38,7 @@
   }
 
   .carousel-item {
-    flex: 0 0 auto;
+    flex-shrink: 0;
     width: 100%;
     padding: 0 10px;
   }
@@ -49,8 +49,8 @@
     flex-direction: row;
     align-items: center;
     gap: 693%;
-    position: absolute;
-    top: 50%;
+    position: fixed;
+    top: 75%;
     padding: 9px;
     left: 44%;
   }
@@ -65,10 +65,12 @@
     cursor: pointer;
     width: 80px;
     height: 80px;
+    transition: ease-in-out 0.3s;
   }
 
   .carousel-control:hover {
-    background-color: rgba(220, 18, 18, 0.695);
+    cursor: pointer;
+    transform: scale(1.1);
   }
 
   .carousel-control:first-child {
@@ -79,7 +81,7 @@
     right: 0;
   }
 
-  .carousel__wrapper-background{
+  .carousel__wrapper-background {
     height: 100vh;
   }
 
@@ -90,7 +92,7 @@
     position: absolute;
     width: 88%;
     left: 6%;
-    top: 38%;
+    top: 34%;
     height: 147%;
     box-shadow: -10px 0 10px -5px rgba(250, 229, 237, 1);
     z-index: -1;
@@ -103,7 +105,7 @@
     position: absolute;
     width: 80%;
     left: 10%;
-    top: 34%;
+    top: 30%;
     height: 151%;
     box-shadow: 10px 0 10px -5px rgba(250, 229, 237, 1);
     z-index: -1;
@@ -112,6 +114,7 @@
 
 
   @media only screen and (max-width: 768px) {
+
     .carousel__wrapper--leftCard,
     .carousel__wrapper--rightCard {
       width: 10%;
@@ -119,6 +122,7 @@
   }
 
   @media only screen and (max-width: 576px) {
+
     .carousel__wrapper--leftCard,
     .carousel__wrapper--rightCard {
       width: 5%;

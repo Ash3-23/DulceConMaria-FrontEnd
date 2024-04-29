@@ -3,25 +3,27 @@
   display: flex;
   justify-content: center;
   margin: 0 auto;
-  height: 100%;
   /* Ajusta la altura para que ocupe toda la pantalla */
   padding: 0 20px;
-  /* Agrega un espacio en los lados */
-  max-width: 50%;
+  position: relative;
+  max-height: 100%;
+  overflow: auto;
 }
 
 .recetas-cards__content {
   background-color: #fff;
   border-radius: 10px;
   padding: 20px;
-  width: 72%;
+  width: 85%;
+  height: 1090px;
+  overflow: auto;
 }
 
 .recetas-cards__border {
   border-radius: 10px;
   border: 1.7px solid #f7b3cc8f;
   padding: 20px;
-  height: 100%;
+  min-height: 100%;
 }
 
 .cards-title__h1 {

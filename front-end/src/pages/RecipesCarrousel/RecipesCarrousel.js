@@ -38,6 +38,8 @@ const RecipesCarousel = () => {
       <div className='recetario-carousel__container'>
         <h1 className='recetario__title'>Recetario</h1>
         <div className='carousel__wrapper'>
+          <div className='carousel__wrapper--leftCard'></div>
+          <div className='carousel__wrapper--rightCard'></div>
           <div className='carousel-track' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
             {recipes.map((recipe, index) => (
               <div key={index} className='carousel-item'>
@@ -45,16 +47,7 @@ const RecipesCarousel = () => {
               </div>
             ))}
           </div>
-          <div className='carousel__wrapper-background'>
-            <div className='carousel__wrapper--leftCard'></div>
-            <div className='carousel__wrapper--rightCard'></div>
-          </div>
-
         </div>
-
-
-
-
         <div className='carousel-control__wrapper'>
           <img className='carousel-control' onClick={handlePrev} src={leftArrow} alt="Flecha izquierda"></img>
           <img className='carousel-control' onClick={handleNext} src={rightArrow} alt="Flecha derecha"></img>

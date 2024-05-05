@@ -1,6 +1,7 @@
 import React from 'react';
 import './RecipeCard.css';
-import image from '../../assets/images/Rectangle 31.png'
+import image from '../../assets/images/Rectangle 31.png';
+import iconRecipes from '../../assets/images/iconRecipes.png';
 
 const RecipeCard = ({ recipe }) => {
   if (!recipe) {
@@ -12,10 +13,11 @@ const RecipeCard = ({ recipe }) => {
   return (
     <>
       <div className='recetas-cards__container'>
+   
         <div className='recetas-cards__content'>
           <div className='recetas-cards__border'>
             <div className='recetas-cards__title-wrapper'>
-              <div className='cards-title__icon'></div>
+              <img className='cards-title__icon' src={iconRecipes} alt='iconRecipes' />
               <h2 className='cards-title__h1'>{title}</h2>
             </div>
             <div className='recetas-cards__image-wrapper'>
@@ -26,7 +28,7 @@ const RecipeCard = ({ recipe }) => {
             <div className='recipes-ingredients__container'>
               <div className='recipes-ingredients__wrapper1'>
                 <h4 className='ingredients__title'>Ingredientes</h4>
-                <ul>
+                <ul className='ingredients__list'>
                   {ingredients.map((ingredient, index) => (
                     <li key={index}>{ingredient}</li>
                   ))}

@@ -1,130 +1,112 @@
-  .recetario__container {
-    display: flex;
-    justify-content: space-around;
-    margin: 0 auto;
-    height: auto;
-  }
+.recetario__container {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  height: auto;
+}
 
-  .recetario-carousel__container {
-    margin-top: 8%;
-    width: 100%;
-    /* border: 2px solid black; */
-  }
+.recetario-carousel__container {
+  margin-top: 8%;
+  width: 100%;
+}
 
-  .recetario__title {
-    color: #2558D5;
-    text-align: center;
-    font-family: "Mulish", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
-    font-style: normal;
-  }
+.recetario__title {
+  color: #2558D5;
+  text-align: center;
+  font-family: "Mulish", sans-serif;
+  font-weight: 900;
+}
 
-  .carousel__wrapper {
-    overflow: hidden;
-    width: 90%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 0 auto;
-    margin-top: 1%;
-    margin-bottom: 20px;
-    /* border: 2px solid black; */
-  }
+.carousel__wrapper {
+  overflow: hidden;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 1%;
+  margin-bottom: 20px;
+}
 
-  .carousel-track {
-    display: flex;
-    transition: transform 0.4s cubic-bezier(0.2, 0.1, 0.5, 0.2);
-  }
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.2, 0.1, 0.5, 0.2);
+}
 
-  .carousel-item {
-    flex-shrink: 0;
-    width: 100%;
-    padding: 0 10px;
-  }
+.carousel-item {
+  flex-shrink: 0;
+  width: 100%;
+  padding: 0 10px;
+}
 
-  .carousel-control__wrapper {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    gap: 693%;
-    position: fixed;
-    top: 75%;
-    padding: 9px;
-    left: 44%;
-  }
+.carousel-control__wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  top: 80%;
+  gap: 60%;
+  transform: translateY(-50%);
+  width: 100%;
+}
 
-  .carousel-control {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    justify-content: center;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    width: 80px;
-    height: 80px;
-    transition: ease-in-out 0.3s;
-  }
+.carousel-control {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .carousel-control:hover {
-    cursor: pointer;
-    transform: scale(1.1);
-  }
+.carousel-control img {
+  width: 100%;
+  height: auto;
+}
 
-  .carousel-control:first-child {
-    left: 0;
-  }
+.carousel-control:hover {
+  transform: scale(1.1);
+}
 
-  .carousel-control:last-child {
-    right: 0;
-  }
+.carousel__wrapper--leftCard {
+  background-color: #f8e4ebde;
+  border: 0.1px solid #f7b3cc47;
+  border-radius: 0.6rem;
+  position: absolute;
+  width: 88%;
+  left: 6%;
+  top: 34%;
+  height: 147vh;
+  box-shadow: 1px 5px 10px 5px rgb(198 173 181 / 35%);
+  z-index: -1;
+}
 
-  .carousel__wrapper-background {
-    height: 100vh;
-  }
+.carousel__wrapper--rightCard {
+  background-color: #f8e4ebde;
+  border: 0.1px solid #b6b6b647;
+  border-radius: 0.6rem;
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  top: 30%;
+  height: 151vh;
+  box-shadow: 1px 5px 10px 5px rgb(198 173 181 / 35%);
+  z-index: -1;
+}
 
-  .carousel__wrapper--leftCard {
-    background-color: #f8e4ebde;
-    border: 0.1px solid #f7b3cc7b;
-    border-radius: 0.6rem;
-    position: absolute;
-    width: 88%;
-    left: 6%;
-    top: 34%;
-    height: 147%;
-    box-shadow: -10px 0 10px -5px rgba(250, 229, 237, 1);
-    z-index: -1;
-  }
+@media only screen and (max-width: 768px) {
 
-  .carousel__wrapper--rightCard {
-    background-color: #f8e4ebde;
-    border: 0.1px solid #f7b3cc7b;
-    border-radius: 0.6rem;
-    position: absolute;
-    width: 80%;
-    left: 10%;
-    top: 30%;
-    height: 151%;
-    box-shadow: 10px 0 10px -5px rgba(250, 229, 237, 1);
-    z-index: -1;
-  }
-
-
-
-  @media only screen and (max-width: 768px) {
-
-    .carousel__wrapper--leftCard,
+  /* .carousel__wrapper--leftCard,
     .carousel__wrapper--rightCard {
       width: 10%;
-    }
-  }
+    } */
+}
 
-  @media only screen and (max-width: 576px) {
+@media only screen and (max-width: 576px) {
 
-    .carousel__wrapper--leftCard,
+  /* .carousel__wrapper--leftCard,
     .carousel__wrapper--rightCard {
       width: 5%;
-    }
-  }
+    } */
+}

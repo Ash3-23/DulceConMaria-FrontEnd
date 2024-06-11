@@ -4,6 +4,7 @@ import RecipeCard from '../../components/RecipeCard/RecipeCard';
 import './RecipesCarrousel.css';
 import leftArrow from '../../assets/images/leftArrow.png'
 import rightArrow from '../../assets/images/rightArrow.png'
+import Footer from '../../components/Footer/Footer';
 
 const RecipesCarousel = () => {
   const [recipes, setRecipes] = useState([]);
@@ -34,26 +35,30 @@ const RecipesCarousel = () => {
   };
 
   return (
-    <div className='recetario__container'>
-      <div className='recetario-carousel__container'>
-        <h1 className='recetario__title'>Recetario</h1>
-        <div className='carousel__wrapper'>
-          <div className='carousel__wrapper--leftCard'></div>
-          <div className='carousel__wrapper--rightCard'></div>
-          <div className='carousel-track' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-            {recipes.map((recipe, index) => (
-              <div key={index} className='carousel-item'>
-                <RecipeCard recipe={recipe} />
-              </div>
-            ))}
+    <div>
+      <div className='recetario__container'>
+        <div className='recetario-carousel__container'>
+          <h1 className='recetario__title'>Recetario</h1>
+          <div className='carousel__wrapper'>
+            <div className='carousel__wrapper--leftCard'></div>
+            <div className='carousel__wrapper--rightCard'></div>
+            <div className='carousel-track' style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+              {recipes.map((recipe, index) => (
+                <div key={index} className='carousel-item'>
+                  <RecipeCard recipe={recipe} />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className='carousel-control__wrapper'>
+            <img className='carousel-control' onClick={handlePrev} src={leftArrow} alt="Flecha izquierda"></img>
+            <img className='carousel-control' onClick={handleNext} src={rightArrow} alt="Flecha derecha"></img>
           </div>
         </div>
-        <div className='carousel-control__wrapper'>
-          <img className='carousel-control' onClick={handlePrev} src={leftArrow} alt="Flecha izquierda"></img>
-          <img className='carousel-control' onClick={handleNext} src={rightArrow} alt="Flecha derecha"></img>
-        </div>
       </div>
+      <Footer className='carrousel-footer' />
     </div>
+
   );
 };
 

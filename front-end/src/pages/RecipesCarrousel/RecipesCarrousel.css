@@ -95,7 +95,32 @@
   z-index: -1;
 }
 
+.carrousel-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 968px) {}
+
 @media only screen and (max-width: 768px) {
+  .carousel__wrapper--rightCard {
+    width: 90%;
+    left: 5%;
+    top: 27%;
+    height: 70vh;
+  }
+
+  .carousel__wrapper--leftCard {
+    width: 92%;
+    left: 4%;
+    top: 34%;
+    height: 69vh;
+  }
+
+  .recetario-carousel__container {
+    margin-top: 11%;
+  }
 
   /* .carousel__wrapper--leftCard,
     .carousel__wrapper--rightCard {

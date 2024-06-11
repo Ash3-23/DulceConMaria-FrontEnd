@@ -4,7 +4,7 @@ import './App.css';
 import Home from './pages/Home/Home';
 import HomePage from './pages/HomePage/HomePage';
 import RecipesCarousel from './pages/RecipesCarrousel/RecipesCarrousel';
-import HeaderLayout from './utils/HeaderLayout/HeaderlLayout';
+import HeaderLayout from './utils/HeaderLayout/HeaderLayout';
 
 function App() {
   return (
